@@ -1,4 +1,10 @@
 using Microsoft.EntityFrameworkCore;
+using PIMSys.Services.Interfaces;
+using PIMSys.Services;
+using PIMSys.Repositories.Interfaces;
+using PIMSys.Repositories;
+using PIMSys.Data;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +17,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IPasswordHasher<PIMSys.Models.User>, PasswordHasher<PIMSys.Models.User>>();
 
 // Add this for MySQL connection
 builder.Services.AddDbContext<AppDbContext>(options =>
