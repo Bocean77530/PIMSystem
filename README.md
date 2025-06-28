@@ -2,7 +2,39 @@
 
 A full-stack web application built with .NET 8 Web API backend and React frontend for managing user information with authentication and role-based access control.
 
-## 🏗️ Architecture
+## Table of Contents
+- [Introduction](#introduction)
+- [Architecture](#architecture)
+- [Project Structure](#project-structure)
+- [Getting Start](#getting-started)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+- [License](#license)
+- [Future Enhancements](#future-enhancements)
+
+## Introduction
+
+This demo project shows how a frontend can smoothly work with a backend. It’s built with a clean, scalable structure that follows SOLID principles, so it’s easy to add new features without digging through complicated code. For security, it uses JWT for authentication and hashes user passwords. The frontend and backend are connected through well-organised API calls, making data flow clear and reliable. Feel free to explore the project, try it out, and use it as a learning tool for building secure and maintainable full-stack apps.
+
+### Components
+- **Login**: User authentication with form validation
+- **UserManagement**: CRUD operations for user accounts
+- **Protected Routes**: Role-based access control
+
+### UI/UX
+- **Responsive Design**: Works on desktop and mobile
+- **Modern Styling**: Tailwind CSS with professional appearance
+- **Loading States**: User feedback during API calls
+- **Error Handling**: Graceful error messages
+
+### Authentication Flow
+
+1. **User Registration**: Create account via POST `/api/user`
+2. **User Login**: Authenticate via POST `/api/user/login`
+3. **JWT Token**: Receive token for authenticated requests
+4. **Protected Routes**: Frontend checks token for access control
+
+## Architecture
 
 - **Backend**: ASP.NET Core 8 Web API with Entity Framework Core
 - **Database**: MySQL
@@ -12,7 +44,7 @@ A full-stack web application built with .NET 8 Web API backend and React fronten
 - **Authentication**: JWT (JSON Web Tokens)
 - **Password Security**: ASP.NET Core Identity Password Hasher
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 PIMSystem/
@@ -33,7 +65,7 @@ PIMSystem/
 └── README.md
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -46,7 +78,7 @@ PIMSystem/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Bocean77530/PIMSystem.git
    cd PIMSystem
    ```
 
@@ -95,7 +127,7 @@ PIMSystem/
    ```
    The frontend will be available at `http://localhost:3000`
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Authentication
 - `POST /api/user/login` - User login
@@ -109,126 +141,19 @@ PIMSystem/
   - **Body**: `{ "name": "string", "email": "string", "password": "string" }`
 - `DELETE /api/user/{id}` - Delete user
 
-## 🔐 Authentication Flow
-
-1. **User Registration**: Create account via POST `/api/user`
-2. **User Login**: Authenticate via POST `/api/user/login`
-3. **JWT Token**: Receive token for authenticated requests
-4. **Protected Routes**: Frontend checks token for access control
-
-## 🎨 Frontend Features
-
-### Components
-- **Login**: User authentication with form validation
-- **UserManagement**: CRUD operations for user accounts
-- **Protected Routes**: Role-based access control
-
-### UI/UX
-- **Responsive Design**: Works on desktop and mobile
-- **Modern Styling**: Tailwind CSS with professional appearance
-- **Loading States**: User feedback during API calls
-- **Error Handling**: Graceful error messages
-
-## 🛠️ Development
-
-### Backend Development
-```bash
-cd PIMSys
-dotnet watch run  # Hot reload for development
-```
-
-### Frontend Development
-```bash
-cd frontend
-npm run dev  # Vite dev server with HMR
-```
-
-### Database Migrations
-```bash
-cd PIMSys
-dotnet ef migrations add MigrationName
-dotnet ef database update
-```
-
-## 🔧 Configuration
-
-### Environment Variables
-- **Database Connection**: Configure in `appsettings.json`
-- **JWT Secret**: Set `TokenKey` in `appsettings.json`
-- **CORS**: Configured for React app on port 3000
-
-### Build Configuration
-- **Backend**: .NET 8 with Entity Framework Core
-- **Frontend**: Vite with React 18
-- **Database**: MySQL with Pomelo.EntityFrameworkCore.MySql
-
-## 🧪 Testing
-
-### API Testing
-Use tools like Postman or curl to test endpoints:
-```bash
-# Create user
-curl -X POST https://localhost:5143/api/user \
-  -H "Content-Type: application/json" \
-  -d '{"name":"John Doe","email":"john@example.com","password":"password123"}'
-
-# Login
-curl -X POST https://localhost:5143/api/user/login \
-  -H "Content-Type: application/json" \
-  -d '{"email":"john@example.com","password":"password123"}'
-```
-
-## 📦 Dependencies
-
-### Backend (.NET)
-- ASP.NET Core 8
-- Entity Framework Core
-- AutoMapper
-- Microsoft.AspNetCore.Identity
-- Pomelo.EntityFrameworkCore.MySql
-- System.IdentityModel.Tokens.Jwt
-
-### Frontend (React)
-- React 18
-- Vite
-- Tailwind CSS
-- Lucide React
-- React Router DOM
-
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
+2. Create a feature branch(`git checkout -b feature/AmazingFeature`)
+3. Make your changes(`git commit -m 'Add some AmazingFeature'`)
+4. Add tests if applicable(`git push origin feature/AmazingFeature`)
 5. Submit a pull request
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
-## 🆘 Troubleshooting
-
-### Common Issues
-
-1. **Database Connection Error**
-   - Verify MySQL is running
-   - Check connection string in `appsettings.json`
-   - Ensure database exists
-
-2. **JWT Token Error**
-   - Verify `TokenKey` is set in `appsettings.json`
-   - Ensure key is at least 64 characters long
-
-3. **CORS Error**
-   - Backend CORS is configured for `http://localhost:3000`
-   - Frontend proxy is set to `http://localhost:5143`
-
-4. **Tailwind CSS Not Working**
-   - Ensure PostCSS configuration is correct
-   - Check that Tailwind directives are in `index.css`
-
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - [ ] Role-based access control (Admin/User roles)
 - [ ] User profile management
