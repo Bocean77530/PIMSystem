@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PIMSys")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+496adcba1aad286e0f514834f97b4ab26dce2893")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac9888b469161bc3128afd716978d43f05671268")]
 [assembly: System.Reflection.AssemblyProductAttribute("PIMSys")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PIMSys")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -44,11 +44,7 @@ function App() {
                       </button>
                     </div>
                   </div>
-                  <div className="max-w-2xl mx-auto mt-4 mb-4 p-4 bg-green-50 border border-green-200 rounded">
-                    <div className="text-xs text-green-800 break-all">
-                      <strong>JWT Token:</strong> {token}
-                    </div>
-                  </div>
+                  
                   <UserManagement />
                 </div>
               ) : (
