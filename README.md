@@ -12,6 +12,10 @@
 - [License](#license)
 - [Future Enhancements](#future-enhancements)
 
+
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/Bocean77530/PIMSystem)](https://github.com/Bocean77530/PIMSystem/commits/main)
+[![Top Language](https://img.shields.io/github/languages/top/Bocean77530/PIMSystem)](https://github.com/Bocean77530/PIMSystem/search?l=csharp)
 ## Introduction
 
 This demo project shows how a frontend can smoothly work with a backend. It’s built with a clean, scalable structure that follows SOLID principles, so it’s easy to add new features without digging through complicated code. For security, it uses JWT for authentication and hashes user passwords. The frontend and backend are connected through well-organised API calls, making data flow clear and reliable. Feel free to explore the project, try it out, and use it as a learning tool for building secure and maintainable full-stack apps.
