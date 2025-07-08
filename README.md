@@ -1,6 +1,14 @@
 # Personal Information Management System (PIM System)
 
-**Personal Information Management System (PIMSystem)** is a production-style, full-stack employee directory that lets users register, log in, and securely update their own profiles while giving admins a web console for full CRUD over every account. The backend is written in **C# 12 on ASP.NET 8** with **Entity Framework Core** and **MySQL 8**, exposing a minimal-API REST surface protected by hashed passwords and **stateless JWT tokens**; the frontend is a **React 18 + Vite SPA** styled with **Tailwind CSS** for instant reloads and a fully responsive UI. Internally, the code follows a clean, layered architecture: controllers call service interfaces that in turn use repository and Unit-of-Work patterns, with **DTOs + AutoMapper** to decouple persistence from contracts, and **async/await** everywhere to keep threads free under load. These choices showcase SOLID principles, make unit testing trivial, and let the database (or even the UI technology) be swapped without touching business logic. I picked .NET 8 for its long-term support and speed, MySQL for its ubiquity in low-cost cloud hosts, JWT for easy horizontal scaling, and Tailwind for rapid, conflict-free styling—altogether demonstrating how I can design, build, and maintain a secure, maintainable, and cloud-ready system end-to-end.
+User Manager System is an account management tool built for administrators to manage game user accounts, handle authentication, and track account expiration.
+
+The backend is developed using ASP.NET Core 8, chosen for its high performance and ability to handle millions of transactions efficiently. Since we expect a large number of users in the future, ASP.NET Core 8 helps us process more requests while using less memory. We use Entity Framework Core to simplify database operations, allowing us to focus more on writing backend logic rather than SQL queries. For the database, we selected MySQL because it is cross-platform and supports relational data, which fits our need to store structured data like usernames and passwords.
+
+Since this system is only for admin users, security is a top priority. We use JWT (JSON Web Tokens) for session management because it provides signed tokens that enhance security. In addition, we use hashed passwords through ASP.NET Core Identity to protect user data and reduce the risk of information leaks.
+
+The frontend is built with React 18, which uses JSX—a combination of HTML and JavaScript—making it easier and faster for developers to build interfaces. React also has a large community and many libraries, which makes expanding the app much easier. For styling, we use Tailwind CSS because it offers small, reusable utility classes that speed up development and are easy to understand. We chose Vite as the build tool because it simplifies project setup by providing a clean and minimal application configuration, allowing for a quicker start to development.
+
+Overall, the main goal of this tech stack is to support fast development, while ensuring the system is secure, scalable, and ready for future growth.
 
 ## Table of Contents
 - [Introduction](#introduction)
