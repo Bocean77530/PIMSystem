@@ -172,5 +172,4 @@ This project is licensed under the [MIT License](LICENSE).
 - [ ] Password reset functionality
 - [ ] Email verification
 - [ ] Audit logging
-- [ ] API rate limiting
 - [ ] Unit and integration tests
